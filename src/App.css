@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Container for the entire app */
+.app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+  background: #f0f0f0;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Title styling */
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #007bff;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
   color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.download-button {
+  margin-top: 20px;
+}
+
+/* Business card styling */
+.card {
+  background: linear-gradient(135deg, rgb(65, 90, 204), rgb(255, 119, 214));
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 450px;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden; /* Hide any content overflowing the card boundaries */
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #f06, #f79); /* Same gradient for the pseudo-element */
+  border-radius: 15px; /* Ensure rounded corners */
+  z-index: -1; /* Place behind the card content */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Image holder styling */
+.image-holder {
+  width: 120px;
+  height: 120px;
+  background-color: #e6e6e6;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  border: 2px solid #fff;
+}
+
+.image-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card details styling */
+.card-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+
+.card-details h2 {
+  margin: 0;
+}
+
+.card-details h4 {
+  margin: 5px 0;
+}
+
+.card-details p {
+  margin: 2px 0;
 }
