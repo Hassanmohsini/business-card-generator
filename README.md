@@ -3,7 +3,7 @@ https://hassanmohsini.github.io/business-card-generator/
 
 # My Project Screenshot
 
-![Project Screenshot](business-card-generator.png)
+![Project Screenshot](Business-card-generator.png)
 
 
 
